@@ -1,2 +1,17 @@
-# sillytavern_var.lib
-SillyTavern 的简单文本变量示例
+# SillyTavern 基于简单文本的变量示例库
+
+## 仓库概述
+
+这是一个个人分享
+
+`sample_library`用来存储日常在 SillyTavern 角色卡编辑过程中引用的固定世界书条目，这些条目均是基于简单文本的变量。
+
+`bilibili_doc`用来存储在B站分享课程中用到的文档。
+
+## 如何使用
+
+1. 在本仓库`sample_library`文件夹中，下载所需的文档。
+2. 将文档内的所有内容全部复制到世界书新建条目内。
+3. 在“`Cot`”中进行“`<标签>`”或“`字段`”的引用，并告知AI即可。
+
+可参考我的B站分享: https://space.bilibili.com/582462
