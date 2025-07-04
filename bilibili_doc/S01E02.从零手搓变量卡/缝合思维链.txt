@@ -1,0 +1,1 @@
+- List `<core_judgment>` and output as required.
