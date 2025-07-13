@@ -8,6 +8,8 @@
 
   - `prompt_template` 用来存储我分享的角色卡制作提示词和世界书。
 
+  - `SillyTavern SAMU 状态感知管理器` SAM 的非官方分支 **[👉点这里访问,🌟SAMU](https://github.com/LynxShu/st_samu)** 进度 65%: [██████████------]
+
 
 ## 📺️ 我的 Bilibili 分享系列 
 
@@ -28,7 +30,9 @@
 
 ## 🤝 本仓库项目文本基于或涉及到的项目列表
 
-- @DefinitelyNotProcrastinating *[SillyTavern 状态感知管理器 (SAM)](https://github.com/DefinitelyNotProcrastinating/ST_var_manager)*
+- @DefinitelyNotProcrastinating **[SillyTavern 状态感知管理器 (SAM)](https://github.com/DefinitelyNotProcrastinating/ST_var_manager)**
+
+- @LynxShu **[🌟 SillyTavern SAMU 状态感知管理器](https://github.com/LynxShu/st_samu)**
 
 ## 💖 推荐给大家的好东西~
 
