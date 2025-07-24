@@ -1,18 +1,18 @@
-<div style="text-align:center">
-<img alt="LynxShu" src="assets/img/md_logo.png">
-</div>
+<h1 align="center">
+  <a href="https://github.com/LynxShu/lynxshu.cntwsp">
+    <img alt="LynxShu" src="assets/img/md_logo.png"><br>
+  </a>
 
-<div style="text-align:center">
-<a href="https://github.com/LynxShu/lynxshu.cntwsp/blob/main/LICENSE">
-<img alt="license" src="https://img.shields.io/badge/License%20-%20CC--BY--NC--SA%204.0-%20%23006cff?style=flat-square&logo=creativecommons&logoColor=white">
-</a> 
-<a href="https://space.bilibili.com/582462">
-<img alt="bilibili" src="https://img.shields.io/badge/Bilibili%20-%20LynxShu%20-%20%23006cff?style=flat-square&logo=bilibili&logoColor=white">
-</a> 
-<a href="https://github.com/LynxShu">
-<img alt="github" src="https://img.shields.io/badge/Github%20-%20LynxShu%20-%20%23006cff?style=flat-square&logo=github&logoColor=white">
-</a>
-</div>
+  <a href="https://github.com/LynxShu/lynxshu.cntwsp/blob/main/LICENSE">
+    <img alt="license" src="https://img.shields.io/badge/License%20-%20CC--BY--NC--SA%204.0-%20%23006cff?style=flat-square&logo=creativecommons&logoColor=white">
+  </a> 
+  <a href="https://space.bilibili.com/582462">
+    <img alt="bilibili" src="https://img.shields.io/badge/Bilibili%20-%20LynxShu%20-%20%23006cff?style=flat-square&logo=bilibili&logoColor=white">
+  </a> 
+  <a href="https://github.com/LynxShu">
+    <img alt="github" src="https://img.shields.io/badge/Github%20-%20LynxShu%20-%20%23006cff?style=flat-square&logo=github&logoColor=white">
+  </a>
+</h1>
 
 <h1 align="center">S01E02 SillyTavern 的配置与使用</h1>
 
