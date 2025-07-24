@@ -15,7 +15,7 @@
 </h1>
 <br>
 
-🌟嘿！你好！这是 LynxShu 的内容分享工坊，欢迎欢迎👏👏👏
+<h1>🌟嘿！你好！这是 LynxShu 的内容分享工坊，欢迎欢迎👏👏👏</h1>
 
   - `Course_Materials` 用来存储我在 Bilibili 分享课程中用到的文档。
 
@@ -23,9 +23,9 @@
 
 > 💡 目前我正在重新制作新的系列视频和提示词，可能现在会有点空，很快就会好起来哒！
 
-<h2>📚️ 我的内容分享系列</h2>
+<h1>📚️ 我的内容分享系列</h1>
 
-<h3>👼 SillyTavern | 酒馆 - 纯享版保姆级分享课</h3>
+<h2>👼 SillyTavern | 酒馆 - 纯享版保姆级分享课</h2>
 
 - S01E01 - SillyTavern 的简介与安装 - [图文版](Course_Materials/SillyTavern纯享版保姆级分享课/S01E01%20-%20SillyTavern%20的简介与安装.md) | 视频版
 
@@ -37,23 +37,20 @@
 
 - S01E05 - 从零开始手搓 SAM 变量角色卡-附提示词 - 图文版 | 视频版
 
----
 
-<h3>🧠 AI的脑子里在想些什么</h3>
+<h2>🧠 AI的脑子里在想些什么</h2>
 
 - S01E01 - 提示词还是上下文？这是个问题 - 图文版 | 视频版
 
 - S01E02 - 言与义，AI 对话的终极解法？ - 图文版 | 视频版
 
----
 
-<h3>🤝 本仓库项目文本基于或涉及到的项目列表</h3>
+<h2>🤝 本仓库项目文本基于或涉及到的项目列表</h2>
 
 - @DefinitelyNotProcrastinating **[SillyTavern 状态感知管理器 (SAM)](https://github.com/DefinitelyNotProcrastinating/ST_var_manager)**
 
----
 
-<h3>💖 推荐给大家的好东西~</h3>
+<h2>💖 推荐给大家的好东西~</h2>
 
 - 📺️ LynxShu | Bilibili个人主页 | **[👉点这里嘿嘿,记得关注哦!](https://space.bilibili.com/582462)**
 
@@ -73,4 +70,3 @@
 
 - 🛠️ 酒馆助手 Tavern-Helper | 啊？你确定你不装吗 | **[官网页面-点这里跳转](https://n0vi028.github.io/JS-Slash-Runner-Doc/)**
 
----
