@@ -37,6 +37,7 @@
 
 - S01E05 - 从零开始手搓 SAM 变量角色卡-附提示词 - 图文版 | 视频版
 
+---
 
 <h3>🧠 AI的脑子里在想些什么</h3>
 
@@ -44,11 +45,13 @@
 
 - S01E02 - 言与义，AI 对话的终极解法？ - 图文版 | 视频版
 
+---
 
 <h3>🤝 本仓库项目文本基于或涉及到的项目列表</h3>
 
 - @DefinitelyNotProcrastinating **[SillyTavern 状态感知管理器 (SAM)](https://github.com/DefinitelyNotProcrastinating/ST_var_manager)**
 
+---
 
 <h3>💖 推荐给大家的好东西~</h3>
 
