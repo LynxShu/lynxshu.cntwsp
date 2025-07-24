@@ -15,7 +15,7 @@
 </h1>
 <br>
 
-<h1>🌟嘿！你好！这是 LynxShu 的内容分享工坊，欢迎欢迎👏👏👏</h1>
+🌟嘿！你好！这是 LynxShu 的内容分享工坊，欢迎欢迎👏👏👏
 
   - `Course_Materials` 用来存储我在 Bilibili 分享课程中用到的文档。
 
