@@ -12,6 +12,9 @@
   <a href="https://github.com/LynxShu">
     <img alt="github" src="https://img.shields.io/badge/Github%20-%20LynxShu%20-%20%23006cff?style=flat-square&logo=github&logoColor=white">
   </a>
+  <a href="https://qm.qq.com/q/xSXhxPUXHq">
+    <img alt="github" src="https://img.shields.io/badge/QQ交流群%20-%20773925842%20-%20%23006cff?style=flat-square&logo=qq&logoColor=white">
+  </a>
 </h1>
 <br>
 
