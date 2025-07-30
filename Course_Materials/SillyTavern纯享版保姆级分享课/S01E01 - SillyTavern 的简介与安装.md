@@ -66,7 +66,7 @@ SillyTavern 的工作方式，就是把你的角色设定、历史聊天记录�
 
 无论你选择哪种方式，都需要先安装 NodeJS，它是 SillyTavern 运行所需要的基础环境。
 
-- **NodeJS** - [官网下载](https://nodejs.org/en/download) | [国内网盘下载](https://pan.baidu.com/s/1_UdIrgQRdglkKirJmKF5JQ?pwd=lynx)
+- **NodeJS** - [官网下载](https://nodejs.org/en/download) | [国内网盘下载](https://pan.baidu.com/s/5Ep9b4L4HMODM8MxquMCmpg)
 - **安装建议**：下载 **LTS (长期支持版)** 版本。安装时一路点击“Next”即可，无需特殊配置。
 
 ### 2. 选择安装方式
@@ -78,7 +78,7 @@ SillyTavern 的工作方式，就是把你的角色设定、历史聊天记录�
 
 此方法还需要额外安装 Git for Windows。
 
-- **Git For Windows** - [官网下载](https://gitforwindows.org/) | [国内网盘下载](https://pan.baidu.com/s/1SsdsV-9oxHUFhwGbtzrKYQ?pwd=lynx)
+- **Git For Windows** - [官网下载](https://gitforwindows.org/) | [国内网盘下载](https://pan.baidu.com/s/5Ep9b4L4HMODM8MxquMCmpg)
 - **安装建议**：安装时一路点击“Next”即可。
 
 安装好 Git 后，我们开始下载 SillyTavern 本体。
@@ -121,7 +121,7 @@ git clone https://github.com/SillyTavern/SillyTavern -b release
 
 **第一步：下载 SillyTavern 压缩包**
 
-- [GitHub官方下载页面](https://github.com/SillyTavern/SillyTavern/releases/latest) | [国内网盘分流下载](https://pan.baidu.com/s/5PuOoTF8hYPalUApxKNSdGg)
+- [GitHub官方下载页面](https://github.com/SillyTavern/SillyTavern/releases/latest) | [国内网盘分流下载](https://pan.baidu.com/s/5Ep9b4L4HMODM8MxquMCmpg)
 - **注意**：如果你能访问 Github，请从 GitHub 下载 `Source code (zip)`。网盘分流的版本可能不是最新的。
 
 **第二步：解压并运行**
