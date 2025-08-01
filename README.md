@@ -34,7 +34,7 @@
 
 - S01E02 - SillyTavern 的配置与使用 - [图文版](Course_Materials/SillyTavern纯享版保姆级分享课/S01E02%20-%20SillyTavern%20的配置与使用.md) | [视频版](https://www.bilibili.com/video/BV1JNhAzvEuM)
 
-- S01E03 - SillyTavern 的界面与详解 - [图文版](Course_Materials/SillyTavern纯享版保姆级分享课/S01E03%20-%20SillyTavern%20的界面与详解.md) | 视频版
+- S01E03 - SillyTavern 的界面与详解 - [图文版](Course_Materials/SillyTavern纯享版保姆级分享课/S01E03%20-%20SillyTavern%20的界面与详解.md) | [视频版](https://www.bilibili.com/video/BV1tjh7zWEtW)
 
 - S01E04 - 从零开始编写你自己的预设-附演示预设  - 图文版 | 视频版
 
