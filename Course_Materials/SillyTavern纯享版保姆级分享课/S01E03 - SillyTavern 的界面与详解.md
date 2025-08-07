@@ -14,6 +14,9 @@
   </a>
 </h1>
 
+> fix:
+> 25.08.07 基于 13.2 版本修正 config.yaml 的说明 
+
 
 <h1 align="center">S01E03 SillyTavern 的功能与详解</h1>
 
@@ -783,62 +786,131 @@ CFG提供了三个层级的配置，优先级从低到高：
 
 最重要的配置文件叫做 `config.yaml`，它位于你的 SillyTavern 安装根目录下。
 
-> **⚠️ 注意：** `config.yaml`会在初次运行时创建，修改任何 `.yaml` 文件时，请使用专业的文本编辑器，如 **VS Code**、**Sublime Text** 等。**不要使用 Windows 自带的记事本**，它可能会破坏文件的格式！
+> **⚠️ 注意：** `config.yaml`会在初次运行时创建，修改任何 `.yaml` 文件时，请使用专业的文本编辑器，如 **VS Code**、**Sublime Text** 等。**不要使用 Windows 自带的记事本**，它可能会破坏文件的格式！修改此文件后，您需要**重启 SillyTavern 服务器**才能使更改生效。`true` 或 `false` 值不需要加引号。
 
-让我们来看几个最常用的配置项：
+### 实例一：开放局域网访问
 
-### 1. 修改访问端口
+**目标**：你希望在电脑上运行 SillyTavern，然后用同一网络下的手机或平板来访问。
 
-默认情况下，SillyTavern 运行在 `8000` 端口上。如果这个端口被其他程序占用了，你可以在 `config.yaml` 中找到 `SERVER CONFIGURATION` 分区并修改它。
+**操作步骤**：
+
+1.  找到 `SERVER CONFIGURATION` 部分。
+2.  将 `listen` 的值从 `false` 改为 `true`。
+3.  确认 `listenAddress` 下的 `ipv4` 的值为 `0.0.0.0`。
+4.  找到 `SECURITY CONFIGURATION` 部分。
+5.  在 `whitelist` 列表下，添加你手机或平板的局域网 IP 地址。
+
+**修改示例**：
 
 ```yaml
 # -- SERVER CONFIGURATION --
-# ... (其他设置) ...
+# Listen for incoming connections
+listen: true # <--- 从 false 改为 true
+# Listen on a specific address, supports IPv4 and IPv6
+listenAddress:
+  ipv4: 0.0.0.0 # <--- 确保是这个值
+  ipv6: '[::]'
+
+# ... 中间省略 ...
+
+# -- SECURITY CONFIGURATION --
+# Toggle whitelist mode
+whitelistMode: true
+# Whitelist of allowed IP addresses
+whitelist:
+  - ::1
+  - 127.0.0.1
+  - 192.168.1.101 # <--- 在这里添加你手机的局域网 IP
+  - 192.168.0.0/16 # <--- 这样修改是允许所有 192.168 网段的 IP
+```
+
+**说明**：重启服务后，你就可以通过 `http://<你电脑的IP地址>:8000` 在手机上访问了。
+
+### 实例二：修改访问端口号
+
+**目标**：默认的 `8000` 端口被其他程序占用了，需要更换一个新端口。
+
+**操作步骤**：
+
+1.  找到 `SERVER CONFIGURATION` 部分。
+2.  修改 `port` 的值为你想要的新端口号，例如 `8888`。
+
+**修改示例**：
+
+```yaml
 # Server port
-port: 8000
+port: 8888 # <--- 从 8000 修改为 8888
+# -- SSL options --
 ```
-比如，你可以把它改成 `8080` 或其他未被占用的端口。
 
-### 2. 开启局域网共享
+**说明**：重启服务后，你的访问地址将变为 `http://localhost:8888`。
 
-想在同一 WiFi 网络下的手机、平板或其他电脑上使用你主机上的 SillyTavern 吗？你需要开启局域网（LAN）共享。找到 `listen` 选项，将 `false` 改为 `true`。
+### 实例三：为 API 请求设置代理
 
-```yaml
-# -- SERVER CONFIGURATION --
-# Listen for incoming connections
-listen: false
-```
-改为：
-```yaml
-# Listen for incoming connections
-listen: true
-```
-保存并重启 SillyTavern 后，你就可以在其他设备上，通过 `http://<你电脑的局域网IP>:<端口号>` 来访问了。（例如: `http://192.168.1.101:8000`）
+**目标**：由于网络原因，无法直接连接 OpenAI 或其他 AI 服务的 API，需要通过代理服务器进行访问。
 
-> **💡 进阶提示：** 配置提供了更精细的控制。在 `listen: true` 的下方，你还可以通过 `protocol` 设置来决定是启用 `ipv4` 还是 `ipv6`。对于绝大多数家庭网络环境，默认设置（`ipv4: true`, `ipv6: false`）就是最佳选择，无需改动。
+**操作步骤**：
 
-### 3. 设置网络代理
+1.  找到 `REQUEST PROXY CONFIGURATION` 部分。
+2.  将 `enabled` 的值从 `false` 改为 `true`。
+3.  在 `url` 处填入你的代理服务器地址。
 
-如果你需要通过代理来连接 AI 的 API（例如 OpenAI 或其他海外服务），新版配置提供了专门的 `requestProxy` 区域。这比旧版更加强大。
-
-找到 `REQUEST PROXY CONFIGURATION` 分区。你需要做两步操作：
-
-1.  将 `enabled` 的值从 `false` 改为 `true`。
-2.  在 `url` 字段中填入你的代理地址。
-
-例如，一个本地的 HTTP 代理通常是 `http://127.0.0.1:端口号`。修改后的配置如下：
+**修改示例**：
 
 ```yaml
 # -- REQUEST PROXY CONFIGURATION --
 requestProxy:
-  # If a proxy is enabled, all outgoing HTTP/HTTPS requests will be routed through it.
-  enabled: true
-  # Proxy URL. Possible protocols: http, https, socks, socks5, socks4, pac
-  url: "http://127.0.0.1:7890" # <-- 在这里填入你的代理地址
-  # Proxy bypass list. Requests to these hosts won't be routed through the proxy.
-  bypass:
-    - localhost
-    - 127.0.0.1
+  enabled: true # <--- 从 false 改为 true
+  url: "http://127.0.0.1:7890" # <--- 示例: 使用本地的 HTTP 代理
+  # bypass:
+  #   - localhost
+  #   - 127.0.0.1
 ```
 
-> **重要提示：** 每当你修改了 `config.yaml` 文件，都必须**关闭 SillyTavern 的命令行窗口并重新运行 `Start.bat`** 才能让改动生效。
+**说明**：重启服务后，SillyTavern 发送给 AI 提供商的所有网络请求都会通过你设置的代理进行。
+
+### 实例四：开启密码访问（基础认证）
+
+**目标**：为你的 SillyTavern 增加一层简单的密码保护，防止未授权访问。
+
+**操作步骤**：
+
+1.  找到 `SECURITY CONFIGURATION` 部分。
+2.  将 `basicAuthMode` 的值从 `false` 改为 `true`。
+3.  在 `basicAuthUser` 下，修改 `username` 和 `password` 为你想要的凭据。
+
+**修改示例**：
+
+```yaml
+# -- SECURITY CONFIGURATION --
+# ...
+# Toggle basic authentication for endpoints
+basicAuthMode: true # <--- 从 false 改为 true
+# Basic authentication credentials
+basicAuthUser:
+  username: "user"      # <--- 修改为你想要的用户名
+  password: "password" # <--- 修改为你想要的密码
+# ...
+```
+
+**说明**：重启服务后，任何访问 SillyTavern 页面的用户都会看到一个弹窗，必须输入正确的用户名和密码才能进入。
+
+### 实例五：优化 Ollama 连接性能
+
+**目标**：如果你在本地使用 Ollama，希望模型一直加载在内存中以获得更快的响应速度。
+
+**操作步骤**：
+
+1.  滚动到文件末尾，找到 `OLLAMA API CONFIGURATION` 部分。
+2.  确保 `keepAlive` 的值是 `-1`。
+
+**修改示例**：
+
+```yaml
+# -- OLLAMA API CONFIGURATION --
+ollama:
+  keepAlive: -1 # <--- 设置为 -1，表示永久加载
+  batchSize: -1
+```
+
+**说明**：设置为 `-1` 可以让模型在第一次被调用后就常驻在 VRAM/RAM 中，后续的对话响应会非常迅速。但这会持续占用你的硬件资源，请根据你的电脑配置决定。
